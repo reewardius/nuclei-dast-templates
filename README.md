@@ -1,10 +1,11 @@
 # nuclei-dast-templates
-
 ```
 katana -u http://testphp.vulnweb.com -aff -j -o katana.jsonl
 nuclei -l katana.jsonl -im jsonl -t nuclei-dast-templates
 ```
-![image](https://github.com/user-attachments/assets/dabcb114-f193-485b-ac6d-092198f1638c)
+**Nuclei DAST Templates**
+
+![image](https://github.com/user-attachments/assets/fec0e7c1-8f28-41f1-9193-0b1ae5bf2224)
 
 **Tags**
 ```
@@ -22,3 +23,4 @@ nuclei -l katana.jsonl -im jsonl -t nuclei-dast-templates -tags fuzzing-req-cook
 nuclei -l katana.jsonl -im jsonl -t nuclei-dast-templates -tags fuzzing-req-header
 nuclei -l katana.jsonl -im jsonl -t nuclei-dast-templates -tags fuzzing-req-path
 ```
+![image](https://github.com/user-attachments/assets/dabcb114-f193-485b-ac6d-092198f1638c)
