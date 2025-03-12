@@ -7,17 +7,13 @@ info:
   reference:
     - https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Directory%20Traversal/Intruder/directory_traversal.txt
     - https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/File%20Inclusion
-  tags: lfi,dast,linux
+  tags: fuzzing-req-query
 
 http:
   - pre-condition:
       - type: dsl
         dsl:
           - 'method == "GET"'
-          - 'method == "POST"'
-          - 'method == "PUT"'
-          - 'method == "PATCH"'
-          - 'method == "DELETE"'
 
     payloads:
       nix_fuzz:

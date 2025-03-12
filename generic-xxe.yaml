@@ -6,7 +6,7 @@ info:
   severity: medium
   reference:
     - https://github.com/andresriancho/w3af/blob/master/w3af/plugins/audit/xxe.py
-  tags: dast,xxe
+  tags: fuzzing-req-query
 
 variables:
   rletter: "{{rand_base(6,'abc')}}"
@@ -16,10 +16,6 @@ http:
       - type: dsl
         dsl:
           - 'method == "GET"'
-          - 'method == "POST"'
-          - 'method == "PUT"'
-          - 'method == "PATCH"'
-          - 'method == "DELETE"'
 
     payloads:
       xxe:
@@ -58,4 +54,3 @@ http:
         part: interactsh_protocol
         words:
           - "http"
-# digest: 4b0a00483046022100f4bbfc3971586034fe4acec998d83906a5475082576c1188c48196e212dd6147022100acbeef0ac9677e9e0e5665a5181eb75b9d52bd56103b81a525ba9b9c307e566c:922c64590222798bb761d5b6d8e72950

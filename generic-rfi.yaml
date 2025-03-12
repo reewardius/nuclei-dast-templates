@@ -6,17 +6,13 @@ info:
   severity: high
   reference:
     - https://www.invicti.com/learn/remote-file-inclusion-rfi/
-  tags: rfi,dast,oast
+  tags: fuzzing-req-query
 
 http:
   - pre-condition:
       - type: dsl
         dsl:
           - 'method == "GET"'
-          - 'method == "POST"'
-          - 'method == "PUT"'
-          - 'method == "PATCH"'
-          - 'method == "DELETE"'
 
     payloads:
       rfi:

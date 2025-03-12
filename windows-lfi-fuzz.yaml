@@ -4,17 +4,13 @@ info:
   name: Local File Inclusion - Windows
   author: pussycat0x
   severity: high
-  tags: lfi,windows,dast
+  tags: fuzzing-req,fuzzing-req-query
 
 http:
   - pre-condition:
       - type: dsl
         dsl:
           - 'method == "GET"'
-          - 'method == "POST"'
-          - 'method == "PUT"'
-          - 'method == "PATCH"'
-          - 'method == "DELETE"'
 
     payloads:
       win_fuzz:

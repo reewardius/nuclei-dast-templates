@@ -6,17 +6,13 @@ info:
   severity: high
   reference:
     - https://github.com/bugcrowd/HUNT/blob/master/ZAP/scripts/passive/SSRF.py
-  tags: ssrf,dast
+  tags: fuzzing-req-query,fuzzing-req-ssrf
 
 http:
   - pre-condition:
       - type: dsl
         dsl:
           - 'method == "GET"'
-          - 'method == "POST"'
-          - 'method == "PUT"'
-          - 'method == "PATCH"'
-          - 'method == "DELETE"'
 
     payloads:
       ssrf:
@@ -40,37 +36,6 @@ http:
     fuzzing:
       - part: query
         mode: single
-        keys:
-          - callback
-          - continue
-          - data
-          - dest
-          - dir
-          - domain
-          - feed
-          - file
-          - host
-          - html
-          - imgurl
-          - navigation
-          - next
-          - open
-          - out
-          - page
-          - path
-          - port
-          - redirect
-          - reference
-          - return
-          - show
-          - site
-          - to
-          - uri
-          - url
-          - val
-          - validate
-          - view
-          - window
         fuzz:
           - "{{ssrf}}"
 

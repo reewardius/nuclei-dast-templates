@@ -9,7 +9,7 @@ info:
   reference:
     - https://bishopfox.com/blog/ruby-vulnerabilities-exploits
     - https://codeql.github.com/codeql-query-help/ruby/rb-kernel-open/
-  tags: cmdi,oast,dast,blind,ruby,rce
+  tags: fuzzing-req-query
 
 variables:
   marker: "{{interactsh-url}}"
@@ -19,10 +19,6 @@ http:
       - type: dsl
         dsl:
           - 'method == "GET"'
-          - 'method == "POST"'
-          - 'method == "PUT"'
-          - 'method == "PATCH"'
-          - 'method == "DELETE"'
 
     stop-at-first-match: true
     payloads:
