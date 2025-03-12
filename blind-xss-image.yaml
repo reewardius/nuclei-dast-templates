@@ -4,7 +4,7 @@ info:
   name: blind-xss-image
   author: reewardius
   severity: high
-  tags: blind-xss,generic
+  tags: blind-xss,generic,fuzzing-req
   
 http:
   - raw:
