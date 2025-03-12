@@ -4,7 +4,7 @@ info:
   name: Reflected Cross Site Scripting
   author: reewardius
   severity: medium
-  tags: fuzzing-req,fuzzing-req-body-query,fuzzing-req-query,fuzzing-req-reflected
+  tags: fuzzing-req,fuzzing-req-body-query,fuzzing-req-query,fuzzing-req-reflected,reflected
   
 http:
   - pre-condition:

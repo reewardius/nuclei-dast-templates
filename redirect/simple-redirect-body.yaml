@@ -4,7 +4,7 @@ info:
   name: Open Redirect Detection
   author: princechaddha,AmirHossein Raeisi
   severity: medium
-  tags: fuzzing-req-body,fuzzing-req-redirect
+  tags: fuzzing-req-body,fuzzing-req-redirect,redirect
 
 http:
   - pre-condition:

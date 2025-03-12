@@ -10,7 +10,7 @@ info:
   reference:
     - https://portswigger.net/research/hunting-asynchronous-vulnerabilities
     - https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Command%20Injection/README.md
-  tags: fuzzing-req,fuzzing-req-query
+  tags: fuzzing-req,fuzzing-req-query,rce
 
 variables:
   marker: "{{interactsh-url}}"

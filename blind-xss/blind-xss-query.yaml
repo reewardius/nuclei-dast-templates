@@ -1,10 +1,10 @@
-id: blind-xss-fuzzing
+id: blind-xss-query
 
 info:
   name: Blind XSS Collaborator
   author: reewardius
   severity: high
-  tags: fuzzing-xss,fuzzing-req-query
+  tags: fuzzing-xss,fuzzing-req-query,fuzzing-req-xss,xss
   
 http:
   - method: GET

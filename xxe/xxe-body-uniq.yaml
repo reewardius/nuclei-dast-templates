@@ -4,7 +4,7 @@ info:
   name: XXE 
   author: reewardius
   severity: high
-  tags: fuzzing-req,fuzzing-req-xxe,fuzzing-req-body-query,fuzzing-req-body
+  tags: fuzzing-req,fuzzing-req-xxe,fuzzing-req-body-query,fuzzing-req-body,xxe
   
 http:
   - pre-condition:

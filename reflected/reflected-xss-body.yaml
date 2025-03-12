@@ -4,7 +4,7 @@ info:
   name: Reflected Cross-Site Scripting
   author: pdteam,0xKayala,AmirHossein Raeisi
   severity: medium
-  tags: fuzzing-req-body,fuzzing-req,fuzzing-req-reflected,fuzzing-req-xss
+  tags: fuzzing-req-body,fuzzing-req,fuzzing-req-reflected,fuzzing-req-xss,reflected
 
 variables:
   first: "{{rand_int(10000, 99999)}}"

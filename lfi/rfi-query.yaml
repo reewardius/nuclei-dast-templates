@@ -6,7 +6,7 @@ info:
   severity: high
   reference:
     - https://www.invicti.com/learn/remote-file-inclusion-rfi/
-  tags: fuzzing-req,fuzzing-req-lfi,fuzzing-req-body-query,fuzzing-req-query
+  tags: fuzzing-req,fuzzing-req-lfi,fuzzing-req-body-query,fuzzing-req-query,lfi,rfi
 
 http:
   - pre-condition:

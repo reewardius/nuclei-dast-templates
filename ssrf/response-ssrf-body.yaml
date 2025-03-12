@@ -6,7 +6,7 @@ info:
   severity: high
   reference:
     - https://github.com/bugcrowd/HUNT/blob/master/ZAP/scripts/passive/SSRF.py
-  tags: fuzzing-req-body,fuzzing-req-ssrf
+  tags: fuzzing-req-body,fuzzing-req-ssrf,ssrf
 
 http:
   - pre-condition:

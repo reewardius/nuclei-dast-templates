@@ -4,7 +4,7 @@ info:
   name: CRLF Injection
   author: pdteam
   severity: low
-  tags: fuzzing-req-body
+  tags: fuzzing-req-body,crlf
 
 http:
   - pre-condition:

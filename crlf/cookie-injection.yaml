@@ -7,7 +7,7 @@ info:
   reference:
     - https://www.invicti.com/blog/web-security/understanding-cookie-poisoning-attacks/
     - https://docs.imperva.com/bundle/on-premises-knowledgebase-reference-guide/page/cookie_injection.htm
-  tags: fuzzing-req-cookie
+  tags: fuzzing-req-cookie,fuzzing-req,fuzzing-req-crlf,crlf
 
 variables:
   first: "cookie_injection"

