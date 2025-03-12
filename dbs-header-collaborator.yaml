@@ -34,11 +34,9 @@ http:
           - "{{rce}}"
           
     stop-at-first-match: true
-    matchers-condition: or
     matchers:
       - type: word
         part: interactsh_protocol
         words:
           - "dns"
           - "http"
-        condition: or
