@@ -14,6 +14,7 @@ fuzzing-req-body
 fuzzing-req-path
 fuzzing-req-cookie
 fuzzing-req-header
+blind-xss
 ```
 **Command to run fuzzing scan**
 ```
