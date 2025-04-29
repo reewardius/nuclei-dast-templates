@@ -140,6 +140,7 @@ http:
         words:
           - "uid="
           - "gid="
+        condition: and
         
       - type: word
         part: body
