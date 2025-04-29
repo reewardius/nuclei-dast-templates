@@ -40,4 +40,6 @@ http:
         part: header
         status:
           - 404
+          - 301
+          - 302
         negative: true
