@@ -1,7 +1,12 @@
 # nuclei-dast-templates
+**Crawl and fuzz all HTTP methods and their possible values:**
 ```
-katana -u http://testphp.vulnweb.com -aff -j -o katana.jsonl
-nuclei -l katana.jsonl -im jsonl -t nuclei-dast-templates
+katana -u http://testphp.vulnweb.com -aff -iqp -j -o katana.jsonl
+nuclei -l katana.jsonl -im jsonl -t nuclei-dast-templates/
+```
+**Skip fuzzing of HTTP headers and cookies:**
+```
+nuclei -l katana.jsonl -im jsonl -t nuclei-dast-templates/ -dast -etags fuzzing-req-header,fuzzing-req-cookie 
 ```
 **Nuclei DAST Templates**
 
