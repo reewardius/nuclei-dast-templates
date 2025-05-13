@@ -4,7 +4,7 @@ info:
   name: Remote Code Execution
   author: reewardius
   severity: critical
-  tags: fuzzing-req,fuzzing-req-rce,fuzzing-req-body,fuzzing-req-body-query,rce
+  tags: fuzzing-req,fuzzing-req-rce,fuzzing-req-body,fuzzing-req-body-query,rce,dast
   
 variables:
   python_payload: "python3 -c 'import socket;socket.gethostbyname(\"{{interactsh-url}}\")'"

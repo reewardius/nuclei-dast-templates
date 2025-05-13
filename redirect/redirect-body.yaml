@@ -5,7 +5,7 @@ info:
   author: reewardius
   severity: low
   description: A user-controlled input redirects users to an external website.
-  tags: fuzzing-req,fuzzing-req-redirect,fuzzing-req-body,fuzzing-req-body-query,redirect
+  tags: fuzzing-req,fuzzing-req-redirect,fuzzing-req-body,fuzzing-req-body-query,redirect,dast
   
 http:
   - pre-condition:

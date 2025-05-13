@@ -8,7 +8,7 @@ info:
     - https://www.tarlogic.com/blog/red-team-tales-0x01/
     - https://medium.com/@notsoshant/a-not-so-blind-rce-with-sql-injection-13838026331e
     - https://medium.com/@markmotig/how-to-capture-mssql-credentials-with-xp-dirtree-smbserver-py-5c29d852f478
-  tags: fuzzing-req,fuzzing-req-rce,fuzzing-req-header
+  tags: fuzzing-req,fuzzing-req-rce,fuzzing-req-header,dast
   
 http:
   - pre-condition:

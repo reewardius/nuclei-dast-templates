@@ -4,7 +4,7 @@ info:
   name: Local File Inclusion - Windows
   author: reewardius
   severity: high
-  tags: fuzzing-req,fuzzing-req-body,lfi
+  tags: fuzzing-req,fuzzing-req-body,lfi,dast
 
 http:
   - pre-condition:

@@ -4,7 +4,7 @@ info:
   name: Remote Code Execution
   author: reewardius
   severity: critical
-  tags: fuzzing-req,fuzzing-req-rce,fuzzing-req-body,fuzzing-req-body-query,fuzzing-req-rce-body-query,rce
+  tags: fuzzing-req,fuzzing-req-rce,fuzzing-req-body,fuzzing-req-body-query,fuzzing-req-rce-body-query,rce,dast
   
 variables:
   marker: "{{interactsh-url}}"

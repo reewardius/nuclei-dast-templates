@@ -4,7 +4,7 @@ info:
   name: Remote File Inclusion
   author: reewardius
   severity: high
-  tags: fuzzing-req,fuzzing-req-lfi,fuzzing-req-body-query,fuzzing-req-body,lfi,rfi
+  tags: fuzzing-req,fuzzing-req-lfi,fuzzing-req-body-query,fuzzing-req-body,lfi,rfi,dast
   reference:
     - https://www.invicti.com/learn/remote-file-inclusion-rfi/
 
