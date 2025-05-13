@@ -8,17 +8,30 @@ nuclei -l katana.jsonl -im jsonl -t nuclei-dast-templates/
 ```
 nuclei -l katana.jsonl -im jsonl -t nuclei-dast-templates/ -dast -etags fuzzing-req-header,fuzzing-req-cookie 
 ```
-**Tags**
+**General Tags**
 ```
 fuzzing-req-query
 fuzzing-req-body
 fuzzing-req-path
 fuzzing-req-cookie
 fuzzing-req-header
+```
+**Fuzzing Vulnerability Tags**
+```
 blind-xss
+fuzzing-req-crlf
+fuzzing-req-csv
+fuzzing-req-lfi
+fuzzing-req-oob
+fuzzing-req-rce
+fuzzing-req-redirect
+fuzzing-req-reflected
+fuzzing-req-ssrf
+fuzzing-req-ssti
+fuzzing-req-xss
+fuzzing-req-xxe
 ```
 **The following tags can be used to perform fuzzing scans on different parts of an HTTP request**
-
 Fuzzing query parameters:
 ```
 nuclei -l katana.jsonl -im jsonl -t nuclei-dast-templates -tags fuzzing-req-query
