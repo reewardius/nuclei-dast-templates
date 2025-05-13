@@ -4,7 +4,7 @@ info:
   name: Exploiting XInclude to retrieve files
   author: reewardius
   severity: high
-  tags: fuzzing-xxe,dast
+  tags: fuzzing-xxe,dast,fuzzing-req-xxe
   
 http:
   - method: GET

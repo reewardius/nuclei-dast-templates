@@ -4,7 +4,7 @@ info:
   name: Blind SSRF OAST Detection
   author: pdteam,AmirHossein Raeisi
   severity: medium
-  tags: fuzzing-req-body,fuzzing-req,ssrf,dast
+  tags: fuzzing-req-body,fuzzing-req,ssrf,dast,fuzzing-req-ssrf
 
 http:
   - pre-condition:

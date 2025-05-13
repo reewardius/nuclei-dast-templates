@@ -6,7 +6,7 @@ info:
   severity: medium
   description: |
     A CSV injection detection template to identify and prevent CSV injection vulnerabilities by using various payloads that could be interpreted as formulas by spreadsheet applications.
-  tags: fuzzing-req-query,csv,dast
+  tags: fuzzing-req-query,csv,dast,fuzzing-csv,fuzzing-req-csv
 
 http:
   - pre-condition:
