@@ -8,7 +8,7 @@ nuclei -l katana.jsonl -im jsonl -t nuclei-dast-templates/
 ```
 nuclei -l katana.jsonl -im jsonl -t nuclei-dast-templates/ -dast -etags fuzzing-req-header,fuzzing-req-cookie 
 ```
-**Nuclei DAST Templates**
+**Nuclei DAST Templates Validation**
 
 ![image](https://github.com/user-attachments/assets/fec0e7c1-8f28-41f1-9193-0b1ae5bf2224)
 
