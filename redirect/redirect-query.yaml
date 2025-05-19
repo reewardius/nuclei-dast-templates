@@ -17,6 +17,9 @@ http:
       redirect:
         - "//evil.com"
         - "{{base64('http://evil.com')}}"
+        - "[@evil.com"
+        - "{{Host}}[@evil.com"
+        - "{{Hostname}}[@evil.com"
         - "//evil.com/?:"
         - "@evil.com"
         - "evil.com"
@@ -140,6 +143,8 @@ http:
         - '//evil.com\@{{Host}}'
         - 'evil.com://{{Host}}'
         - 'evil.com://{{Hostname}}'
+        - '{{Host}}%2F%2E%2E%2F%2E%2E%2Fevil.com'
+        - '{{Hostname}}%2F%2E%2E%2F%2E%2E%2Fevil.com'
         - '//evil.com\tevil.com/'
         - '//evil.com\t{{Host}}/'
         - '//https:///evil.com/%2e%2e'
