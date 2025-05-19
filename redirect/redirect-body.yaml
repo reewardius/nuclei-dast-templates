@@ -141,6 +141,8 @@ http:
         - '//evil.com:80?@{{Host}}/'
         - '//evil.com@//'
         - '//evil.com\@{{Host}}'
+        - 'evil.com://{{Host}}'
+        - 'evil.com://{{Hostname}}'
         - '//evil.com\tevil.com/'
         - '//evil.com\t{{Host}}/'
         - '//https:///evil.com/%2e%2e'
@@ -344,4 +346,3 @@ http:
           - 306
           - 307
           - 308
-        condition: or
