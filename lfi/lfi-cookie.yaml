@@ -351,6 +351,7 @@ http:
         - '{{fuzz}}windows/win.ini'
         - '\/127.0.0.1\C$/Windows///////\system32/drivers//////\etc/hosts.......'
         - '%%32%65%%32%65/%%32%65%%32%65/%%32%65%%32%65/%%32%65%%32%65/%%32%65%%32%65/%%32%65%%32%65/%%32%65%%32%65/etc/passwd'
+        - 'file:\\\\etc\\passwd'
         
     fuzzing:
       - part: header

