@@ -2,11 +2,11 @@
 **Crawl and fuzz all HTTP methods and their possible values:**
 ```
 katana -u http://testphp.vulnweb.com -aff -iqp -j -o katana.jsonl
-nuclei -l katana.jsonl -im jsonl -t nuclei-dast-templates/
+nuclei -l katana.jsonl -im jsonl -t nuclei-dast-templates/ -fuzz-param-frequency 10000
 ```
 **Skip fuzzing of HTTP headers and cookies:**
 ```
-nuclei -l katana.jsonl -im jsonl -t nuclei-dast-templates/ -dast -etags fuzzing-req-header,fuzzing-req-cookie 
+nuclei -l katana.jsonl -im jsonl -t nuclei-dast-templates/ -dast -etags fuzzing-req-header,fuzzing-req-cookie -fuzz-param-frequency 10000
 ```
 **General Tags**
 ```
@@ -34,23 +34,23 @@ fuzzing-req-xxe
 **The following tags can be used to perform fuzzing scans on different parts of an HTTP request**
 Fuzzing query parameters:
 ```
-nuclei -l katana.jsonl -im jsonl -t nuclei-dast-templates -tags fuzzing-req-query
+nuclei -l katana.jsonl -im jsonl -t nuclei-dast-templates -tags fuzzing-req-query -fuzz-param-frequency 10000
 ```
 Fuzzing the request body:
 ```
-nuclei -l katana.jsonl -im jsonl -t nuclei-dast-templates -tags fuzzing-req-body
+nuclei -l katana.jsonl -im jsonl -t nuclei-dast-templates -tags fuzzing-req-body -fuzz-param-frequency 10000
 ```
 Fuzzing cookies in the request:
 ```
-nuclei -l katana.jsonl -im jsonl -t nuclei-dast-templates -tags fuzzing-req-cookie
+nuclei -l katana.jsonl -im jsonl -t nuclei-dast-templates -tags fuzzing-req-cookie -fuzz-param-frequency 10000
 ```
 Fuzzing request headers:
 ```
-nuclei -l katana.jsonl -im jsonl -t nuclei-dast-templates -tags fuzzing-req-header
+nuclei -l katana.jsonl -im jsonl -t nuclei-dast-templates -tags fuzzing-req-header -fuzz-param-frequency 10000
 ```
 Fuzzing the request path:
 ```
-nuclei -l katana.jsonl -im jsonl -t nuclei-dast-templates -tags fuzzing-req-path
+nuclei -l katana.jsonl -im jsonl -t nuclei-dast-templates -tags fuzzing-req-path -fuzz-param-frequency 10000
 ```
 # Features
 
