@@ -12,7 +12,7 @@ http:
       - type: dsl
         dsl:
           - 'method == "GET"'
-      
+          
     payloads:
       redirect:
         - "//evil.com"
