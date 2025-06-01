@@ -2,11 +2,11 @@
 **Crawl and fuzz all HTTP methods and their possible values:**
 ```bash
 katana -u http://testphp.vulnweb.com -aff -iqp -j -o katana.jsonl && \
-nuclei -l katana.jsonl -im jsonl -t nuclei-dast-templates/ -fuzz-param-frequency 10000
+nuclei -l katana.jsonl -im jsonl -t nuclei-dast-templates/ -fuzz-param-frequency 10000 -stats -pc 250 -c 100 -rl 1000 -bs 100
 ```
 **Skip fuzzing of HTTP headers and cookies:**
 ```bash
-nuclei -l katana.jsonl -im jsonl -t nuclei-dast-templates/ -dast -etags fuzzing-req-header,fuzzing-req-cookie -fuzz-param-frequency 10000
+nuclei -l katana.jsonl -im jsonl -t nuclei-dast-templates/ -dast -etags fuzzing-req-header,fuzzing-req-cookie -fuzz-param-frequency 10000 -stats -pc 250 -c 100 -rl 1000 -bs 100
 ```
 **General Tags**
 ```bash
@@ -34,23 +34,23 @@ fuzzing-req-xxe
 **The following tags can be used to perform fuzzing scans on different parts of an HTTP request**
 Fuzzing query parameters:
 ```bash
-nuclei -l katana.jsonl -im jsonl -t nuclei-dast-templates -tags fuzzing-req-query -fuzz-param-frequency 10000
+nuclei -l katana.jsonl -im jsonl -t nuclei-dast-templates -tags fuzzing-req-query -fuzz-param-frequency 10000 -stats -pc 250 -c 100 -rl 1000 -bs 100
 ```
 Fuzzing the request body:
 ```bash
-nuclei -l katana.jsonl -im jsonl -t nuclei-dast-templates -tags fuzzing-req-body -fuzz-param-frequency 10000
+nuclei -l katana.jsonl -im jsonl -t nuclei-dast-templates -tags fuzzing-req-body -fuzz-param-frequency 10000 -stats -pc 250 -c 100 -rl 1000 -bs 100
 ```
 Fuzzing cookies in the request:
 ```bash
-nuclei -l katana.jsonl -im jsonl -t nuclei-dast-templates -tags fuzzing-req-cookie -fuzz-param-frequency 10000
+nuclei -l katana.jsonl -im jsonl -t nuclei-dast-templates -tags fuzzing-req-cookie -fuzz-param-frequency 10000 -stats -pc 250 -c 100 -rl 1000 -bs 100
 ```
 Fuzzing request headers:
 ```bash
-nuclei -l katana.jsonl -im jsonl -t nuclei-dast-templates -tags fuzzing-req-header -fuzz-param-frequency 10000
+nuclei -l katana.jsonl -im jsonl -t nuclei-dast-templates -tags fuzzing-req-header -fuzz-param-frequency 10000 -stats -pc 250 -c 100 -rl 1000 -bs 100
 ```
 Fuzzing the request path:
 ```bash
-nuclei -l katana.jsonl -im jsonl -t nuclei-dast-templates -tags fuzzing-req-path -fuzz-param-frequency 10000
+nuclei -l katana.jsonl -im jsonl -t nuclei-dast-templates -tags fuzzing-req-path -fuzz-param-frequency 10000 -stats -pc 250 -c 100 -rl 1000 -bs 100
 ```
 # Features
 
