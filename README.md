@@ -1,10 +1,10 @@
 # nuclei-dast-templates
-**Crawl and fuzz all HTTP methods and their possible values:**
+#### **Crawl and fuzz all HTTP methods and their possible values:**
 ```bash
 katana -u http://testphp.vulnweb.com -aff -iqp -j -o katana.jsonl && \
 nuclei -l katana.jsonl -im jsonl -t nuclei-dast-templates/ -fuzz-param-frequency 10000 -stats -pc 250 -c 100 -rl 1000 -bs 100
 ```
-**Skip fuzzing of HTTP headers and cookies:**
+#### **Skip fuzzing of HTTP headers and cookies:**
 ```bash
 nuclei -l katana.jsonl -im jsonl -t nuclei-dast-templates/ -dast -etags fuzzing-req-header,fuzzing-req-cookie -fuzz-param-frequency 10000 -stats -pc 250 -c 100 -rl 1000 -bs 100
 ```
@@ -32,25 +32,37 @@ fuzzing-req-xss
 fuzzing-req-xxe
 ```
 **The following tags can be used to perform fuzzing scans on different parts of an HTTP request**
-Fuzzing query parameters:
+#### Fuzzing query parameters:
 ```bash
 nuclei -l katana.jsonl -im jsonl -t nuclei-dast-templates -tags fuzzing-req-query -fuzz-param-frequency 10000 -stats -pc 250 -c 100 -rl 1000 -bs 100
 ```
-Fuzzing the request body:
+#### Fuzzing the request body:
 ```bash
 nuclei -l katana.jsonl -im jsonl -t nuclei-dast-templates -tags fuzzing-req-body -fuzz-param-frequency 10000 -stats -pc 250 -c 100 -rl 1000 -bs 100
 ```
-Fuzzing cookies in the request:
+#### Fuzzing cookies in the request:
 ```bash
 nuclei -l katana.jsonl -im jsonl -t nuclei-dast-templates -tags fuzzing-req-cookie -fuzz-param-frequency 10000 -stats -pc 250 -c 100 -rl 1000 -bs 100
 ```
-Fuzzing request headers:
+#### Fuzzing request headers:
 ```bash
 nuclei -l katana.jsonl -im jsonl -t nuclei-dast-templates -tags fuzzing-req-header -fuzz-param-frequency 10000 -stats -pc 250 -c 100 -rl 1000 -bs 100
 ```
-Fuzzing the request path:
+#### Fuzzing the request path:
 ```bash
 nuclei -l katana.jsonl -im jsonl -t nuclei-dast-templates -tags fuzzing-req-path -fuzz-param-frequency 10000 -stats -pc 250 -c 100 -rl 1000 -bs 100
+```
+#### Optimal advanced scanning
+```
+nuclei -l katana.jsonl -im jsonl \
+  -t nuclei-dast-templates/ \
+  -dast \
+  -fuzz-param-frequency 10000 \
+  -ss template-spray \
+  -pc 100 -c 50 -rl 500 -bs 50 \
+  -spm -stream -no-httpx \
+  -cos ".*\.(css|js|png|jpg|jpeg|gif|ico|svg|woff|ttf|pdf|zip).*" \
+  -o results.jsonl -j -silent
 ```
 # Features
 
