@@ -156,7 +156,6 @@ http:
         words:
           - "http"
           - "dns"
-        condition: or
           
       - type: word
         part: body
