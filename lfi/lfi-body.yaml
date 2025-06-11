@@ -393,14 +393,6 @@ http:
         part: body
         words:
           - "cm9vdDp4Og"
-          
-      - type: word
-        part: body
-        words:
-          - "SHELL="
-          - "USER="
-          - "PATH="
-        condition: and
         
       - type: word
         part: body
@@ -414,7 +406,7 @@ http:
           
       - type: word
         part: body
-        condition: or
+        condition: and
         words:
           - 'for 16-bit app support'
           - 'This file contains the mappings of IP addresses to host names'
