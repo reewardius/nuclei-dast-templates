@@ -61,7 +61,6 @@ nuclei -l katana.jsonl -im jsonl \
   -ss template-spray \
   -pc 100 -c 50 -rl 500 -bs 50 \
   -spm -stream -no-httpx \
-  -cos ".*\.(css|js|png|jpg|jpeg|gif|ico|svg|woff|ttf|pdf|zip).*" \
   -o results.jsonl -j -silent
 ```
 # Features
